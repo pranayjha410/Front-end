@@ -7,11 +7,11 @@ function ShowMore({description}) {
   
   return (
     <div>
-      <div className="App">
+      <div >
       <p>
         {showMore ? description : `${description.substring(0, 50)}`}
       </p>
-      <button className="btn" onClick={() => setShowMore(!showMore)}> {showMore ? 'Show less' : 'Show more'}</button>
+      <button  onClick={() => setShowMore(!showMore)}> {showMore ? 'Show less' : 'Show more'}</button>
     </div>
     </div>
   )
