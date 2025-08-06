@@ -1,9 +1,13 @@
-import Product from "./Componet/Product";
-
+import CartPage from "./Componet/CartPage";
+import Home from "./Componet/Home";
+import { Routes,Route } from "react-router-dom";
 function App() {
   return (
     <div >
-      <Product></Product>
+      <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/CartPage" element={<CartPage />} />
+      </Routes>
     </div>
   );
 }

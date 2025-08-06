@@ -1,5 +1,6 @@
 import React from "react";
 import Cart from "./Cart";
+import { Link } from "react-router-dom";
 
 const Navbar = ({ cartCount }) => {
   return (
@@ -27,15 +28,15 @@ const Navbar = ({ cartCount }) => {
 
         {/* Nav links */}
         <nav className="hidden md:flex gap-6 text-base text-green-400">
-          <a className="hover:text-white cursor-pointer">First Link</a>
-          <a className="hover:text-white cursor-pointer">Second Link</a>
-          <a className="hover:text-white cursor-pointer">Third Link</a>
-          <a className="hover:text-white cursor-pointer">Fourth Link</a>
+          <Link to='/' className="hover:text-white cursor-pointer">Home</Link>
+          <Link to='/product' className="hover:text-white cursor-pointer">Proudct</Link>
+          <Link to='/bout' className="hover:text-white cursor-pointer">About</Link>
+          <Link to='/contect' className="hover:text-white cursor-pointer">Contect Us</Link>
         </nav>
 
         {/* Cart icon */}
         <div className="flex items-center">
-          <Cart cartCount={cartCount} />
+         <Link to='/cartPage'><Cart cartCount={cartCount} /></Link> 
         </div>
       </div>
     </header>
