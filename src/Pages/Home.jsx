@@ -1,27 +1,19 @@
 import React, { useState } from "react";
-import ShowMore from "./ShowMore";
-import Cart from "./Cart";
+import ShowMore from "../Componet/ShowMore";
+import Cart from "../Componet/Cart";
 import sportData from "../api/Data.json";
-import List from "./List";
-import Navbar from "./Navbar";
+import List from "../Componet/List";
+import Navbar from "../Componet/Navbar";
 
-const Product = () => {
-  const [cartItems, setCartItems] = useState([]); // holds array of added product IDs
-
-  const handleToCart = (productId) => {
-    setCartItems((prevItems) =>
-      prevItems.includes(productId)
-        ? prevItems.filter((id) => id !== productId)
-        : [...prevItems, productId]
-    );
-  };
+const Product = ({ cartItems, handleToCart }) => {
+  
 
   return (
     <div className="min-h-screen bg-white">
       {/* Navbar fixed at top with no spacing issues */}
-      <div className="fixed top-0 left-0 w-full z-10">
+      {/* <div className="fixed top-0 left-0 w-full z-10">
         <Navbar cartCount={cartItems.length} />
-      </div>
+      </div> */}
 
       {/* Padding to prevent content hiding behind fixed navbar */}
       <div className="pt-20 px-6">
@@ -36,6 +28,8 @@ const Product = () => {
           ))}
         </ul>
       </div>
+
+      
     </div>
   );
 };

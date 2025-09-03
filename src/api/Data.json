@@ -4,7 +4,7 @@
     "name": "Kookaburra Cricket Bat",
     "price": 2499,
     "description": "Premium English willow bat with thick edges, ideal for beginners and semi-pro players.",
-    "image": "https://m.media-amazon.com/images/I/61qPYZJHhAL._SX679_.jpg",
+    "image": "https://cdn-d03d5231-5b2e278c.commercebuild.com/cf738e9579802e6b988bb225ca6bc00c/contents/2A25132/2A25132C-Kahuna-2_1-Shadow.jpg",
     "category": "Cricket"
   },
   {
@@ -12,7 +12,7 @@
     "name": "Nike Football Shoes",
     "price": 3499,
     "description": "Lightweight and breathable shoes designed for fast-paced football action.",
-    "image": "https://m.media-amazon.com/images/I/71Omr+ci1GL._SY695_.jpg",
+    "image": "https://m.media-amazon.com/images/I/61HgtuPUYRL._UY1000_.jpg",
     "category": "Football"
   },
   {
@@ -20,7 +20,7 @@
     "name": "Cosco Basketball",
     "price": 999,
     "description": "Durable rubber basketball for indoor and outdoor use, ideal for practice and matches.",
-    "image": "https://m.media-amazon.com/images/I/71mHZfQ8VvL._SX679_.jpg",
+    "image": "https://store.cosco.in/cdn/shop/files/DSC0472.jpg?v=1731583298",
     "category": "Basketball"
   },
   {
@@ -28,7 +28,7 @@
     "name": "Nivia Gym Bag",
     "price": 799,
     "description": "Spacious and stylish gym bag with shoe compartment and water-resistant material.",
-    "image": "https://m.media-amazon.com/images/I/71Vch84z4lL._SX679_.jpg",
+    "image": "https://www.niviasports.com/cdn/shop/files/Re-6853-Grey-1.jpg?v=1718700008&width=1946",
     "category": "Fitness"
   }
 ]
