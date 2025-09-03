@@ -29,7 +29,7 @@ function App() {
       <Route path="/about" element={<div>About Us Page Coming Soon</div>} />
       <Route path="/contact" element={<div>Contact Page Coming Soon</div>} />
 
-      <Route path="/CartPage" element={<CartPage cartItems={cartItems} />} />
+      <Route path="/CartPage" element={<CartPage cartItems={cartItems} handleToCart={handleToCart} />} />
       </Routes>
     </div>
   );

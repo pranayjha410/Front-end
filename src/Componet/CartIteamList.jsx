@@ -1,8 +1,9 @@
 import React from 'react'
 import { FaCartArrowDown } from "react-icons/fa6";
 import sportData from "../api/Data.json"
+import { FaTrashRestore } from "react-icons/fa";
 
-const CartIteamList = ({cartItems}) => {
+const CartIteamList = ({cartItems, handleToCart}) => {
     
     const cartProducts = sportData.filter((item) => cartItems.includes(item.id));
     
@@ -17,7 +18,7 @@ const CartIteamList = ({cartItems}) => {
           <FaCartArrowDown></FaCartArrowDown>
         </p>
       ) : (
-        <ul className="space-y-4">
+        <ul className="space-y-4 relative">
           {cartProducts.map((item) => (
             <li key={item.id} className="flex items-center gap-4 border p-4">
               <img
@@ -27,8 +28,16 @@ const CartIteamList = ({cartItems}) => {
               />
               <div>
                 <h2 className="text-lg font-semibold">{item.name}</h2>
-                <p>₹{item.price}</p>
+                <p className='font-extrabold'>₹{item.price}</p>
               </div>
+
+              <button 
+                onClick={() => handleToCart(item.id)} 
+                className="absolute right-4 text-[#177245] hover:text-red-500"
+              >
+                <FaTrashRestore className="text-2xl cursor-pointer" />
+              </button>
+              
             </li>
           ))}
         </ul>
