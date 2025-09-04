@@ -2,8 +2,14 @@ import React from "react";
 import { FaCartArrowDown } from "react-icons/fa6";
 import sportData from "../api/Data.json";
 import { FaTrashRestore } from "react-icons/fa";
+import QuantityControl from "./QuantityControl";
 
-const CartIteamList = ({ cartItems, handleToCart, handleDecreaseQuantity, handleRemoveItem }) => {
+const CartIteamList = ({
+  cartItems,
+  handleToCart,
+  handleDecreaseQuantity,
+  handleRemoveItem,
+}) => {
   const cartProducts = sportData
     .filter((item) => cartItems.some((cartItem) => cartItem.id === item.id))
     .map((item) => {
@@ -32,21 +38,12 @@ const CartIteamList = ({ cartItems, handleToCart, handleDecreaseQuantity, handle
                 <p className="font-extrabold">₹{item.price}</p>
 
                 {/* Quantity Controls */}
-                <div className="flex items-center gap-2 mt-2">
-                  <button
-                    onClick={() => handleDecreaseQuantity(item.id)}
-                    className="px-2 bg-gray-300 rounded"
-                  >
-                    -
-                  </button>
-                  <span>{item.quantity}</span>
-                  <button
-                    onClick={() => handleToCart(item.id)}
-                    className="px-2 bg-gray-300 rounded"
-                  >
-                    +
-                  </button>
-                </div>
+                <QuantityControl
+                  handleToCart={handleToCart}
+                  handleDecreaseQuantity={handleDecreaseQuantity}
+                  id={item.id}
+                  quantity={item.quantity}
+                />
               </div>
 
               {/* ✅ Fix: Trash should remove item, not call handleToCart */}

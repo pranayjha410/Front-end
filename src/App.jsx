@@ -53,7 +53,7 @@ const handleRemoveItem = (productId) => {
 
 
       <Routes>
-      <Route path="/" element={<Home cartItems={cartItems} handleToCart={handleToCart}  handleRemoveItem={handleRemoveItem} />} />
+      <Route path="/" element={<Home cartItems={cartItems} handleToCart={handleToCart}  handleRemoveItem={handleRemoveItem} handleDecreaseQuantity={handleDecreaseQuantity} />} />
       <Route path="/product" element={<div>Products Page Coming Soon</div>} />
       <Route path="/about" element={<div>About Us Page Coming Soon</div>} />
       <Route path="/contact" element={<div>Contact Page Coming Soon</div>} />

@@ -3,7 +3,7 @@ import ShowMore from "../Componet/ShowMore";
 import List from "../Componet/List";
 import sportData from "../api/Data.json";
 
-const Product = ({ cartItems, handleToCart, handleRemoveItem }) => {
+const Product = ({ cartItems, handleToCart, handleRemoveItem,handleDecreaseQuantity }) => {
   return (
     <div className="min-h-screen bg-white">
       <div className="pt-20 px-6">
@@ -15,6 +15,8 @@ const Product = ({ cartItems, handleToCart, handleRemoveItem }) => {
               itemAdded={cartItems.some((item) => item.id === curEle.id)}
               handleToCart={handleToCart}
               handleRemoveItem={handleRemoveItem}
+              handleDecreaseQuantity={handleDecreaseQuantity}
+               cartItems={cartItems}
             />
           ))}
         </ul>
