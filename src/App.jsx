@@ -3,6 +3,7 @@ import Home from "./Pages/Home";
 import { Routes,Route } from "react-router-dom";
 import Navbar from "./Componet/Navbar";
 import { useState } from "react";
+import NotFound from "./Componet/NotFound";
 
 function App() {
 
@@ -59,6 +60,8 @@ const handleRemoveItem = (productId) => {
       <Route path="/contact" element={<div>Contact Page Coming Soon</div>} />
 
       <Route path="/CartPage" element={<CartPage cartItems={cartItems} handleToCart={handleToCart}  handleDecreaseQuantity={handleDecreaseQuantity}  handleRemoveItem={handleRemoveItem}/>} />
+
+      <Route path="*" element={<NotFound/>} />
       </Routes>
     </div>
   );
