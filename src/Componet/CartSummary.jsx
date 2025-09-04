@@ -10,7 +10,8 @@ const CartSummary = ({cartItems}) => {
   });
 
 const totalItems = cartProducts.reduce((acc, item) => acc + item.quantity, 0);
-const totalAmount = cartProducts.reduce((acc, item) => acc + item.price * item.quantity, 0);
+const subtotalAmount = cartProducts.reduce((acc, item) => acc + item.price * item.quantity, 50);
+
 
    
 
@@ -18,7 +19,8 @@ const totalAmount = cartProducts.reduce((acc, item) => acc + item.price * item.q
      <div className="border p-6 rounded-lg shadow-lg bg-white mr-6">
       <h2 className="text-lg font-bold mb-4">Order Summary</h2>
       <p className="mb-2">Total Items: {totalItems}</p>
-      <p className="mb-4 font-semibold">Total Amount: ₹{totalAmount}</p>
+      <p className="mb-2 font-semibold" >Delivery: ₹50</p>
+      <p className="mb-4 font-bold">Total Amount: ₹{subtotalAmount}</p>
       <button className="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700">
         Proceed to Pay
       </button>
