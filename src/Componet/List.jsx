@@ -1,6 +1,6 @@
 import React from "react";
 import ShowMore from "./ShowMore";
-const List = ({ curEle, itemAdded, handleToCart }) => {
+const List = ({ curEle, itemAdded, handleToCart,handleRemoveItem }) => {
   return (
     <div>
       <div className="border rounded-xl shadow-md p-4 max-w-sm">
@@ -15,12 +15,15 @@ const List = ({ curEle, itemAdded, handleToCart }) => {
         </p>
         <ShowMore description={curEle.description} />
 
-        <button
-          className="bg-blue-600 text-white px-4 py-1 mt-2 rounded hover:bg-blue-700 transition"
-          onClick={handleToCart}
-        >
-          {itemAdded ? "Remove from Cart" : "Add to Cart"}
-        </button>
+     <button
+  className="bg-blue-600 text-white px-4 py-1 mt-2 rounded hover:bg-blue-700 transition"
+  onClick={() =>
+    itemAdded ? handleRemoveItem(curEle.id) : handleToCart(curEle.id)
+  }
+>
+  {itemAdded ? "Remove from Cart" : "Add to Cart"}
+</button>
+
       </div>
     </div>
   );

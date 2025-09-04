@@ -1,30 +1,22 @@
 import React from "react";
 import Cart from "./Cart";
-import { Link, NavLink, useLocation } from "react-router-dom";
+import {  NavLink, useLocation, useNavigate } from "react-router-dom";
+import { GiTransportationRings } from "react-icons/gi";
 
 const Navbar = ({ cartCount }) => {
-  const location = useLocation();
+  const location = useLocation(); //to get current location
+  const navigate = useNavigate(); //to change path
 
   return (
     <header className="bg-gray-900 text-white shadow-md w-full">
       <div className="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
         {/* Logo */}
-        <div className="flex items-center gap-2">
-          <div className="bg-pink-500 p-2 rounded-full">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              className="w-6 h-6 text-white"
-              viewBox="0 0 24 24"
-            >
-              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
-            </svg>
+        <div className="flex items-center gap-2 cursor-pointer" onClick={() => navigate("/")}>
+          <div className="bg-pink-500 p-2 rounded-full" >
+            <GiTransportationRings className="text-2xl"/>
+
           </div>
-          <span className="text-xl font-bold">Tailblocks</span>
+          <span className="text-xl font-bold "  >Tailblocks</span>
         </div>
 
         {/* Nav links */}
@@ -74,7 +66,7 @@ const Navbar = ({ cartCount }) => {
           </NavLink>
         </nav>
 
-        {/* Cart icon */}
+        {/* Cart icon in navbar*/}
         <div className="flex items-center">
           {location.pathname !== "/CartPage" && (
             <NavLink to="/CartPage">
