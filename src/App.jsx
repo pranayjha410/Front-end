@@ -4,6 +4,10 @@ import { Routes,Route } from "react-router-dom";
 import Navbar from "./Componet/Navbar";
 import { useState } from "react";
 import NotFound from "./Componet/NotFound";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { toast } from "react-toastify";
+
 
 function App() {
 
@@ -17,11 +21,21 @@ function App() {
 
     if (existingItem) {
       // increase the quantity
+     toast.info("Quantity increased!", {
+  autoClose: 2000,
+  className: "text-3g font-semibold",  // (also fix typo: "3g" → "3xl")
+});
+
       return prevItems.map((item) =>
         item.id === productId ? { ...item, quantity: item.quantity + 1 } : item
       );
     } else {
       // Add new item with quantity
+      toast.success("Item added to cart!", {
+  autoClose: 2000,
+  className: "text-3g font-semibold",
+});
+
       return [...prevItems, { id: productId, quantity: 1 }];
     }
   });
@@ -32,6 +46,7 @@ function App() {
 
   const handleDecreaseQuantity = (productId) => {
   setCartItems((prevItems) =>
+    
     prevItems.map((item) =>
       item.id === productId && item.quantity > 1
         ? { ...item, quantity: item.quantity - 1 }
@@ -41,9 +56,13 @@ function App() {
 };
 
 const handleRemoveItem = (productId) => {
-  setCartItems((prevItems) =>
-    prevItems.filter((item) => item.id !== productId)
-  );
+  setCartItems((prevItems) =>{
+    toast.error("Item removed from cart!" , {
+  className: "text-3g font-semibold", // Tailwind classes
+});
+
+    return prevItems.filter((item) => item.id !== productId)
+});
 };
 
 
@@ -63,6 +82,18 @@ const handleRemoveItem = (productId) => {
 
       <Route path="*" element={<NotFound/>} />
       </Routes>
+
+       <ToastContainer
+  position="bottom-right"
+  autoClose={2000}
+  hideProgressBar={false}
+  newestOnTop={false}
+  closeOnClick
+  rtl={false}
+  pauseOnFocusLoss
+  pauseOnHover
+  theme="colored"
+/>
     </div>
   );
 }
