@@ -1,87 +1,34 @@
-import CartPage from "./Pages/CartPage";
-import Home from "./Pages/Home";
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./Componet/Navbar";
-import { useState, useEffect } from "react";
 import NotFound from "./Componet/NotFound";
+import CartPage from "./Pages/CartPage";
+import ProductCard from "./Pages/ProductCard";
+import Home from "./Pages/Home";
+
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { toast } from "react-toastify";
+
+import { useCart } from "./Hooks/UseCart";
 
 function App() {
-  const [cartItems, setCartItems] = useState(() => {
-    const savedCart = localStorage.getItem("cartItems"); //checked if there is item already in local
-    return savedCart ? JSON.parse(savedCart) : [];
-  });
-
-  //Whenever cartItems changes, automatically save the latest version in localStorage.
-  useEffect(() => {
-    localStorage.setItem("cartItems", JSON.stringify(cartItems));
-  }, [cartItems]);
-
-  //we need to stroe whole array instead of just id
-
-  const handleToCart = (productId) => {
-    setCartItems((prevItems) => {
-      const existingItem = prevItems.find((item) => item.id === productId);
-
-      if (existingItem) {
-        // increase the quantity
-        toast.info("Quantity increased!", {
-          autoClose: 2000,
-          className: "text-3g font-semibold", // (also fix typo: "3g" → "3xl")
-        });
-
-        return prevItems.map((item) =>
-          item.id === productId
-            ? { ...item, quantity: item.quantity + 1 }
-            : item
-        );
-      } else {
-        // Add new item with quantity
-        toast.success("Item added to cart!", {
-          autoClose: 2000,
-          className: "text-3g font-semibold",
-        });
-
-        return [...prevItems, { id: productId, quantity: 1 }];
-      }
-    });
-  };
-
-  //new fuction for decremnt of quantiy
-
-  const handleDecreaseQuantity = (productId) => {
-    setCartItems((prevItems) =>
-      prevItems.map((item) =>
-        item.id === productId && item.quantity > 1
-          ? { ...item, quantity: item.quantity - 1 }
-          : item
-      )
-    );
-  };
-
-  const handleRemoveItem = (productId) => {
-    setCartItems((prevItems) => {
-      toast.error("Item removed from cart!", {
-        className: "text-3g font-semibold", // Tailwind classes
-      });
-
-      return prevItems.filter((item) => item.id !== productId);
-    });
-  };
+  const { cartItems, handleToCart, handleDecreaseQuantity, handleRemoveItem } =
+    useCart();
 
   return (
     <div>
+      {/* Navbar */}
       <Navbar
         cartCount={cartItems.reduce((total, item) => total + item.quantity, 0)}
       />
 
+      {/* Routes */}
       <Routes>
+        <Route path="/" element={<div>Home Page is coming Soon</div>} />
+
         <Route
-          path="/"
+          path="/product"
           element={
-            <Home
+            <ProductCard
               cartItems={cartItems}
               handleToCart={handleToCart}
               handleRemoveItem={handleRemoveItem}
@@ -89,12 +36,8 @@ function App() {
             />
           }
         />
-        <Route path="/product" element={<div>Products Page Coming Soon</div>} />
-        <Route path="/about" element={<div>About Us Page Coming Soon</div>} />
-        <Route path="/contact" element={<div>Contact Page Coming Soon</div>} />
-
         <Route
-          path="/CartPage"
+          path="/cartPage"
           element={
             <CartPage
               cartItems={cartItems}
@@ -104,17 +47,21 @@ function App() {
             />
           }
         />
-
+        <Route path="/about" element={<div>About Us Page Coming Soon</div>} />
+        <Route
+          path="/contact"
+          element={<div>Contact Page Coming Soon</div>}
+        />
         <Route path="*" element={<NotFound />} />
       </Routes>
 
+      {/* Toast Container */}
       <ToastContainer
         position="bottom-right"
         autoClose={2000}
         hideProgressBar={false}
         newestOnTop={false}
         closeOnClick
-        rtl={false}
         pauseOnFocusLoss
         pauseOnHover
         theme="colored"

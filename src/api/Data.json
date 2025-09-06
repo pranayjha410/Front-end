@@ -30,5 +30,53 @@
     "description": "Spacious and stylish gym bag with shoe compartment and water-resistant material.",
     "image": "https://www.niviasports.com/cdn/shop/files/Re-6853-Grey-1.jpg?v=1718700008&width=1946",
     "category": "Fitness"
+  },
+   {
+    "id": 5,
+    "name": "Yonex Badminton Racket",
+    "price": 2499,
+    "description": "Lightweight graphite badminton racket designed for control and power.",
+    "image": "https://m.media-amazon.com/images/I/81G8p7bkdCL.jpg",
+    "category": "Badminton"
+  },
+  {
+    "id": 6,
+    "name": "SG Cricket Bat",
+    "price": 3999,
+    "description": "English willow cricket bat, ideal for professional and club players.",
+    "image": "https://shaktisportspune.com/wp-content/uploads/2021/05/CS3-1.jpg",
+    "category": "Cricket"
+  },
+  {
+    "id": 7,
+    "name": "Nike Running Shoes",
+    "price": 5999,
+    "description": "Comfortable and durable running shoes with breathable mesh upper.",
+    "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/d0fed865-53b4-4f41-9e81-82c1e98b7093/W+NIKE+VOMERO+18.png",
+    "category": "Running"
+  },
+  {
+    "id": 8,
+    "name": "Adidas Football",
+    "price": 1499,
+    "description": "Official size 5 football with high durability and excellent grip.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Adidas_Telstar_18_in_Russia_vs._Argentina.jpg/640px-Adidas_Telstar_18_in_Russia_vs._Argentina.jpg",
+    "category": "Football"
+  },
+  {
+    "id": 9,
+    "name": "Puma Sports T-Shirt",
+    "price": 1299,
+    "description": "Quick-dry, sweat-wicking sports t-shirt made from breathable fabric.",
+    "image": "https://images.jdmagicbox.com/quickquotes/images_main/puma-t-shirts-22-06-2021-1243-231379871-qbh4o.jpg",
+    "category": "Clothing"
+  },
+  {
+    "id": 10,
+    "name": "Decathlon Dumbbell Set",
+    "price": 2799,
+    "description": "Adjustable dumbbell set suitable for home workouts and gym training.",
+    "image": "https://rukminim2.flixcart.com/image/704/844/kz1lle80/dumbbell/a/3/c/-original-imagb53grxdnqqgy.jpeg?q=90&crop=false",
+    "category": "Fitness"
   }
 ]

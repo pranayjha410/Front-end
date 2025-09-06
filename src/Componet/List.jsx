@@ -1,6 +1,7 @@
 import React from "react";
 import ShowMore from "./ShowMore";
 import QuantityControl from "./QuantityControl";
+
 const List = ({
   curEle,
   itemAdded,
@@ -10,39 +11,47 @@ const List = ({
   cartItems,
 }) => {
   return (
-    <div>
-      <div className="border rounded-xl shadow-md p-4 max-w-sm ">
+    <div className="h-full"> 
+      <div className="border rounded-xl shadow-md p-4 h-full flex flex-col">
+        {/* Image */}
         <img
           src={curEle.image}
           alt={curEle.name}
-          className="w-full h-48 object-cover rounded-lg mb-4"
+          className="w-full h-48 object-contain rounded-lg mb-4 bg-gray-100"
         />
+
+        {/* Product Info */}
         <h2 className="text-lg font-bold">{curEle.name}</h2>
         <p className="text-green-600 font-semibold text-md mb-2">
           ₹{curEle.price}
         </p>
-        <ShowMore description={curEle.description} />
 
-        <div className="flex gap-6">
-        <button
-          className="bg-blue-600 text-white px-4 py-1 mt-2 rounded hover:bg-blue-700 transition"
-          onClick={() =>
-            itemAdded ? handleRemoveItem(curEle.id) : handleToCart(curEle.id)
-          }
-        >
-          {itemAdded ? "Remove from Cart" : "Add to Cart"}
-        </button>
+        {/* Description */}
+        <div className="flex-grow">
+          <ShowMore description={curEle.description} />
+        </div>
 
-        {itemAdded && (
-          <QuantityControl
-            id={curEle.id}
-            quantity={
-              cartItems.find((item) => item.id === curEle.id)?.quantity || 1 //optinal chaining
+        {/* Buttons */}
+        <div className="flex gap-4 mt-auto">
+          <button
+            className="bg-blue-600 text-white px-4 py-1 rounded hover:bg-blue-700 transition"
+            onClick={() =>
+              itemAdded ? handleRemoveItem(curEle.id) : handleToCart(curEle.id)
             }
-            handleToCart={handleToCart}
-            handleDecreaseQuantity={handleDecreaseQuantity}
-          />
-        )}
+          >
+            {itemAdded ? "Remove from Cart" : "Add to Cart"}
+          </button>
+
+          {itemAdded && (
+            <QuantityControl
+              id={curEle.id}
+              quantity={
+                cartItems.find((item) => item.id === curEle.id)?.quantity || 1
+              }
+              handleToCart={handleToCart}
+              handleDecreaseQuantity={handleDecreaseQuantity}
+            />
+          )}
         </div>
       </div>
     </div>

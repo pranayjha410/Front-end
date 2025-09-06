@@ -46,7 +46,7 @@ const CartIteamList = ({
                 />
               </div>
 
-              {/* ✅ Fix: Trash should remove item, not call handleToCart */}
+              {/*  Fix: Trash should remove item, not call handleToCart */}
               <button
                 onClick={() => handleRemoveItem(item.id)}
                 className="absolute right-4 text-[#177245] hover:text-red-500"
