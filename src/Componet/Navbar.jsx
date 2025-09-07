@@ -3,6 +3,7 @@ import Cart from "./Cart";
 import {  NavLink, useLocation, useNavigate } from "react-router-dom";
 import { GiTransportationRings } from "react-icons/gi";
 
+
 const Navbar = ({ cartCount }) => {
   const location = useLocation(); //to get current location
   const navigate = useNavigate(); //to change path
@@ -65,6 +66,8 @@ const Navbar = ({ cartCount }) => {
             Contact Us
           </NavLink>
         </nav>
+
+      
 
         {/* Cart icon in navbar*/}
         <div className="flex items-center">
