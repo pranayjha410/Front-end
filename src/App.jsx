@@ -4,6 +4,7 @@ import NotFound from "./Componet/NotFound";
 import CartPage from "./Pages/CartPage";
 import ProductCard from "./Pages/ProductCard";
 import Home from "./Pages/Home";
+import { useState } from "react";
 
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -14,11 +15,13 @@ function App() {
   const { cartItems, handleToCart, handleDecreaseQuantity, handleRemoveItem } =
     useCart();
 
+     const [query, setQuery] = useState(''); //lifted state
+
   return (
     <div>
       {/* Navbar */}
       <Navbar
-        cartCount={cartItems.reduce((total, item) => total + item.quantity, 0)}
+        cartCount={cartItems.reduce((total, item) => total + item.quantity, 0)} query={query} setQuery={setQuery}
       />
 
       {/* Routes */}
@@ -33,6 +36,7 @@ function App() {
               handleToCart={handleToCart}
               handleRemoveItem={handleRemoveItem}
               handleDecreaseQuantity={handleDecreaseQuantity}
+               query={query} setQuery={setQuery}
             />
           }
         />

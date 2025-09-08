@@ -4,18 +4,18 @@ import List from "../Componet/List";
 import sportData from "../api/Data.json";
 import SearchBar from '../Componet/SearchBar';
 
-const ProductCard = ({ cartItems, handleToCart, handleRemoveItem,handleDecreaseQuantity }) => {
+const ProductCard = ({ cartItems, handleToCart, handleRemoveItem,handleDecreaseQuantity,query,setQuery}) => {
 
-  const [query, setQuery] = useState('');
+ 
   const filteredProudct = sportData.filter((item) => item.name.toLowerCase().includes(query.toLowerCase()))
   
   return (
     <div className="min-h-screen bg-white">
          <div className="pt-20 px-6">
 
-           <div className="mb-6 flex justify-center">
+           {/* <div className="mb-6 flex justify-center">
           <SearchBar query={query} setQuery={setQuery} />
-        </div>
+        </div> */}
 
 
            <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">

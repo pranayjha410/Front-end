@@ -2,9 +2,10 @@ import React from "react";
 import Cart from "./Cart";
 import {  NavLink, useLocation, useNavigate } from "react-router-dom";
 import { GiTransportationRings } from "react-icons/gi";
+import SearchBar from "./SearchBar";
 
 
-const Navbar = ({ cartCount }) => {
+const Navbar = ({ cartCount, query, setQuery }) => {
   const location = useLocation(); //to get current location
   const navigate = useNavigate(); //to change path
 
@@ -65,6 +66,8 @@ const Navbar = ({ cartCount }) => {
           >
             Contact Us
           </NavLink>
+
+           <SearchBar query={query} setQuery={setQuery} />
         </nav>
 
       
