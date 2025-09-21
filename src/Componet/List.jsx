@@ -21,20 +21,20 @@ const List = ({
         />
 
         {/* Product Info */}
-        <h2 className="text-lg font-bold">{curEle.name}</h2>
-        <p className="text-green-600 font-semibold text-md mb-2">
+        <h2 className="text-gray-900 font-medium text-lg">{curEle.name}</h2>
+        <p className="text-blue-600 font-semibold">
           ₹{curEle.price}
         </p>
 
         {/* Description */}
-        <div className="flex-grow">
+        <div className="flex-grow text-gray-800 text-sm">
           <ShowMore description={curEle.description} />
         </div>
 
         {/* Buttons */}
         <div className="flex gap-4 mt-auto">
           <button
-            className="bg-blue-600 text-white px-4 py-1 rounded hover:bg-blue-700 transition"
+            className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-3 py-2 rounded-lg shadow-md transition-colors duration-200 cursor-pointer"
             onClick={() =>
               itemAdded ? handleRemoveItem(curEle.id) : handleToCart(curEle.id)
             }

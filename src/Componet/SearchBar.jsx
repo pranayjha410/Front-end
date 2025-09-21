@@ -8,10 +8,10 @@ const SearchBar = ({ query, setQuery }) => {
         type="text"
         value={query}
         onChange={(e) => setQuery(e.target.value)}
-        className="flex-1 px-3 py-2 text-sm border-none text-black focus:outline-none"
+           className="flex-1 px-3 py-1 text-sm border-none text-black focus:outline-none"
         placeholder="Search..."
       />
-      <button className="px-3 py-4 bg-gray-200 hover:bg-gray-300 text-gray-700">
+       <button className="px-3 py-2 bg-gray-200 hover:bg-gray-300 text-gray-700">
         <BsSearch />
       </button>
     </div>

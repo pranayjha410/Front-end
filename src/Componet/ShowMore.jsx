@@ -11,7 +11,7 @@ function ShowMore({description}) {
       <p>
         {showMore ? description : `${description.substring(0, 50)}`}
       </p>
-      <button  onClick={() => setShowMore(!showMore)}> {showMore ? 'Show less' : 'Show more'}</button>
+      <button className='font-semibold text-black cursor-pointer my-2' onClick={() => setShowMore(!showMore)}> {showMore ? 'Show less' : 'Show more'}</button>
     </div>
     </div>
   )

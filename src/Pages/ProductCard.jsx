@@ -28,7 +28,7 @@ const ProductCard = ({
   });
 
   return (
-    <div className="min-h-screen bg-white relative">
+    <div className="min-h-screen bg-gray-50 relative">
       <div className="pt-20 px-6">
         {/* category filter dropdown */}
         <div className="mb-6 flex justify-start absolute top-4 left-4 ml-2">

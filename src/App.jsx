@@ -4,12 +4,14 @@ import NotFound from "./Componet/NotFound";
 import CartPage from "./Pages/CartPage";
 import ProductCard from "./Pages/ProductCard";
 import Home from "./Pages/Home";
+import Footer from "./Componet/Footer";
 import { useState } from "react";
 
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 import { useCart } from "./Hooks/UseCart";
+
 
 function App() {
   const { cartItems, handleToCart, handleDecreaseQuantity, handleRemoveItem } =
@@ -26,7 +28,7 @@ function App() {
 
       {/* Routes */}
       <Routes>
-        <Route path="/" element={<div>Home Page is coming Soon</div>} />
+        <Route path="/" element={<Home/>} />
 
         <Route
           path="/product"
@@ -70,6 +72,8 @@ function App() {
         pauseOnHover
         theme="colored"
       />
+      
+    <Footer/>
     </div>
   );
 }

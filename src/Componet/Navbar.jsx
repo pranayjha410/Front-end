@@ -11,14 +11,14 @@ const Navbar = ({ cartCount, query, setQuery }) => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="bg-gray-900 text-white shadow-md w-full">
+    <header className="bg-blue-900 text-white shadow-md w-full">
       <div className="max-w-7xl mx-auto flex justify-between items-center px-4 md:px-6 py-4">
         {/* Logo */}
         <div
           className="flex items-center gap-2 cursor-pointer"
           onClick={() => navigate("/")}
         >
-          <div className="bg-pink-500 p-2 rounded-full">
+          <div className="text-yellow-400 font-bold text-xl md:text-2xl">
             <GiTransportationRings className="text-2xl" />
           </div>
           <span className="text-xl font-bold">BuyBox</span>
@@ -26,12 +26,12 @@ const Navbar = ({ cartCount, query, setQuery }) => {
 
         {/* Desktop Nav Links + Search */}
         <div className="hidden md:flex md:items-center md:gap-6">
-          <nav className="flex items-center gap-6 text-base text-green-400">
+          <nav className="flex items-center gap-6 text-base text-gray-100">
             <NavLink
               to="/"
               className={({ isActive }) =>
-                `cursor-pointer hover:text-white ${
-                  isActive ? "text-blue-400 font-semibold underline" : ""
+                `cursor-pointer hover:text-yellow-400 ${
+                  isActive ? "text-yellow-400 font-semibold border-b-2 border-yellow-400" : ""
                 }`
               }
             >
@@ -41,8 +41,8 @@ const Navbar = ({ cartCount, query, setQuery }) => {
             <NavLink
               to="/product"
               className={({ isActive }) =>
-                `cursor-pointer hover:text-white ${
-                  isActive ? "text-blue-400 font-semibold underline" : ""
+                `cursor-pointer hover:text-yellow-400 ${
+                  isActive ? "text-yellow-400 font-semibold border-b-2 border-yellow-400" : ""
                 }`
               }
             >
@@ -52,8 +52,8 @@ const Navbar = ({ cartCount, query, setQuery }) => {
             <NavLink
               to="/about"
               className={({ isActive }) =>
-                `cursor-pointer hover:text-white ${
-                  isActive ? "text-blue-400 font-semibold underline" : ""
+                `cursor-pointer hover:text-yellow-400 ${
+                  isActive ? "text-yellow-400 font-semibold border-b-2 border-yellow-400" : ""
                 }`
               }
             >
@@ -63,8 +63,8 @@ const Navbar = ({ cartCount, query, setQuery }) => {
             <NavLink
               to="/contact"
               className={({ isActive }) =>
-                `cursor-pointer hover:text-white ${
-                  isActive ? "text-blue-400 font-semibold underline" : ""
+                `cursor-pointer hover:text-yellow-400 ${
+                  isActive ? "text-yellow-400 font-semibold border-b-2 border-yellow-400" : ""
                 }`
               }
             >
@@ -74,8 +74,9 @@ const Navbar = ({ cartCount, query, setQuery }) => {
 
           {/* Search bar */}
           <div className="ml-6">
-            <SearchBar query={query} setQuery={setQuery} />
+            {location.pathname === "/product" && <SearchBar query={query} setQuery={setQuery} />}
           </div>
+          
         </div>
 
         {/* Cart icon */}
