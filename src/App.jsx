@@ -6,6 +6,8 @@ import ProductCard from "./Pages/ProductCard";
 import Home from "./Pages/Home";
 import Footer from "./Componet/Footer";
 import { useState } from "react";
+import ProductDetail from "./Componet/ProductDetail"
+
 
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -42,6 +44,17 @@ function App() {
             />
           }
         />
+         <Route
+    path="/product/:id"
+    element={
+      <ProductDetail
+        cartItems={cartItems}
+        handleToCart={handleToCart}
+        handleRemoveItem={handleRemoveItem}
+        handleDecreaseQuantity={handleDecreaseQuantity}
+      />
+    }
+  />
         <Route
           path="/cartPage"
           element={
