@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import ShowMore from "../Componet/ShowMore";
+
 import List from "../Componet/List";
 import sportData from "../api/Data.json";
 import SearchBar from "../Componet/SearchBar";

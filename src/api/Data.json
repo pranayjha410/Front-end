@@ -3,80 +3,225 @@
     "id": 1,
     "name": "Kookaburra Cricket Bat",
     "price": 2499,
-    "description": "Premium English willow bat with thick edges, ideal for beginners and semi-pro players.",
-    "image": "https://cdn-d03d5231-5b2e278c.commercebuild.com/cf738e9579802e6b988bb225ca6bc00c/contents/2A25132/2A25132C-Kahuna-2_1-Shadow.jpg",
-    "category": "Cricket"
+    "description": "The Kookaburra Cricket Bat is crafted from premium English willow, designed to balance power and control for players progressing in their cricket journey. Its thick edges and sturdy blade help generate strong shots while maintaining stability, making it a great choice for both practice sessions and competitive play. The comfortable grip ensures longer innings without hand fatigue, and the lightweight design allows easy swing control. Ideal for beginners looking to level up or semi-professional players wanting reliability, this bat offers durability, excellent stroke play, and long-lasting performance.",
+    "image": "https://cdn.pixabay.com/photo/2013/07/13/09/46/cricket-155965_1280.png",
+    "category": "Cricket",
+    "rating": 4.5
   },
   {
     "id": 2,
     "name": "Nike Football Shoes",
     "price": 3499,
-    "description": "Lightweight and breathable shoes designed for fast-paced football action.",
-    "image": "https://m.media-amazon.com/images/I/61HgtuPUYRL._UY1000_.jpg",
-    "category": "Football"
+    "description": "These Nike Football Shoes are engineered for speed, agility, and comfort on the pitch. Made with a lightweight and breathable upper mesh, they keep your feet cool during intense matches while offering a snug, locked-in fit. The stud pattern is optimized for firm ground, providing excellent traction for sharp cuts and explosive sprints. The cushioned insole absorbs impact to reduce strain during long play, while the flexible sole enhances natural movement. Perfect for both practice sessions and competitive games, these shoes are a reliable pick for players who value performance and comfort.",
+    "image": "https://cdn.pixabay.com/photo/2022/07/21/15/37/shoes-7336479_1280.png",
+    "category": "Football",
+    "rating": 4.6
   },
   {
     "id": 3,
     "name": "Cosco Basketball",
     "price": 999,
-    "description": "Durable rubber basketball for indoor and outdoor use, ideal for practice and matches.",
-    "image": "https://store.cosco.in/cdn/shop/files/DSC0472.jpg?v=1731583298",
-    "category": "Basketball"
+    "description": "The Cosco Basketball is designed to withstand both indoor wooden courts and outdoor concrete surfaces, making it versatile for all playing environments. Its durable rubber cover offers an excellent grip, ensuring better ball handling and control during dribbles, passes, and shots. The deep channels allow for accurate finger placement, enhancing spin and precision in throws. Built to last through frequent use, it retains shape and bounce consistency over time. Suitable for beginners practicing skills as well as experienced players engaging in friendly matches, this ball combines affordability, durability, and reliable performance.",
+    "image": "https://cdn.pixabay.com/photo/2014/04/02/11/18/ball-305828_1280.png",
+    "category": "Basketball",
+    "rating": 4.3
   },
-  {
+   {
     "id": 4,
     "name": "Nivia Gym Bag",
     "price": 799,
-    "description": "Spacious and stylish gym bag with shoe compartment and water-resistant material.",
+    "description": "The Nivia Gym Bag is a versatile and durable option for fitness enthusiasts who need a practical yet stylish solution to carry their gear. Made from water-resistant material, it ensures your belongings stay dry and protected even during travel or unexpected weather. The spacious main compartment easily accommodates clothes, towels, and essentials, while the dedicated shoe compartment helps keep footwear separate and hygienic. Lightweight yet sturdy, the bag features strong zippers, comfortable handles, and an adjustable shoulder strap for convenience. Ideal for gym sessions, short trips, or even everyday use, it blends functionality with a sleek, modern design that suits all lifestyles.",
     "image": "https://www.niviasports.com/cdn/shop/files/Re-6853-Grey-1.jpg?v=1718700008&width=1946",
-    "category": "Fitness"
+    "category": "Fitness",
+    "rating": 4.4
   },
-   {
+  {
     "id": 5,
     "name": "Yonex Badminton Racket",
     "price": 2499,
-    "description": "Lightweight graphite badminton racket designed for control and power.",
-    "image": "https://m.media-amazon.com/images/I/81G8p7bkdCL.jpg",
-    "category": "Badminton"
+    "description": "The Yonex Badminton Racket is built for players who seek a balance of control and power in their game. Made from lightweight graphite, it reduces arm fatigue while delivering strong, precise shots. Its aerodynamic frame cuts through the air with minimal resistance, giving faster swing speeds for attacking play. The isometric head shape provides a larger sweet spot, allowing more forgiving and accurate strokes. Whether you’re improving at a beginner level or competing at an intermediate stage, this racket offers durability, stability, and superior performance to help sharpen your skills and dominate rallies with confidence.",
+    "image": "https://cdn.pixabay.com/photo/2022/07/01/11/40/racket-7295461_1280.png",
+    "category": "Badminton",
+    "rating": 4.5
   },
   {
     "id": 6,
     "name": "SG Cricket Bat",
     "price": 3999,
-    "description": "English willow cricket bat, ideal for professional and club players.",
+    "description": "The SG Cricket Bat is a professional-grade English willow bat designed for serious players who want both power and precision. Its well-crafted blade ensures excellent balance, making it suitable for aggressive strokes as well as controlled shot-making. Thick edges and a pronounced sweet spot allow you to clear boundaries effortlessly while still maintaining accuracy. The handle is wrapped with a high-quality grip to prevent slipping during long innings. Trusted by club and professional players, this bat offers durability and top-notch performance, making it an excellent investment for anyone looking to take their cricketing skills to the next level.",
     "image": "https://shaktisportspune.com/wp-content/uploads/2021/05/CS3-1.jpg",
-    "category": "Cricket"
+    "category": "Cricket",
+    "rating": 4.7
   },
   {
     "id": 7,
     "name": "Nike Running Shoes",
     "price": 5999,
-    "description": "Comfortable and durable running shoes with breathable mesh upper.",
-    "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/d0fed865-53b4-4f41-9e81-82c1e98b7093/W+NIKE+VOMERO+18.png",
-    "category": "Running"
+    "description": "Nike Running Shoes are designed for runners who value comfort, durability, and performance. The breathable mesh upper allows proper airflow to keep your feet cool, while the cushioned midsole absorbs shock with every step, reducing strain on your joints. A lightweight design makes them ideal for long-distance running as well as everyday training. The rubber outsole provides reliable traction on various surfaces, ensuring stability and grip whether you’re on the track, road, or treadmill. Stylish yet practical, these shoes suit both athletes and casual runners looking for a premium option that supports peak performance and endurance.",
+    "image": "https://cdn.pixabay.com/photo/2022/05/05/11/15/trainers-7175887_1280.png",
+    "category": "Running",
+    "rating": 4.6
   },
   {
     "id": 8,
     "name": "Adidas Football",
     "price": 1499,
-    "description": "Official size 5 football with high durability and excellent grip.",
+    "description": "The Adidas Football is crafted to meet the needs of players at all levels, from casual kickabouts to competitive matches. Built with high-quality materials, it delivers exceptional durability and consistent performance on different surfaces. Its textured outer layer provides superior grip and ball control, allowing for precise dribbling, accurate passes, and powerful shots. Designed in official size 5, it meets international standards and retains its shape even after long sessions. Perfect for training or tournaments, this ball offers great value for players who want reliability, style, and top-class playability from a trusted sports brand.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Adidas_Telstar_18_in_Russia_vs._Argentina.jpg/640px-Adidas_Telstar_18_in_Russia_vs._Argentina.jpg",
-    "category": "Football"
+    "category": "Football",
+    "rating": 4.5
   },
   {
     "id": 9,
     "name": "Puma Sports T-Shirt",
     "price": 1299,
-    "description": "Quick-dry, sweat-wicking sports t-shirt made from breathable fabric.",
+    "description": "The Puma Sports T-Shirt combines style with performance, making it a must-have for fitness training and casual wear. Made from lightweight, sweat-wicking fabric, it helps you stay cool and dry during workouts or outdoor activities. Its quick-dry technology prevents discomfort caused by excessive sweat, while the breathable material enhances comfort even during intense sessions. Designed with a modern fit and sporty look, it suits gym training, running, or everyday use. Durable stitching ensures long-lasting wear, and the versatile design allows it to be paired easily with shorts, joggers, or track pants for a complete athletic look.",
     "image": "https://images.jdmagicbox.com/quickquotes/images_main/puma-t-shirts-22-06-2021-1243-231379871-qbh4o.jpg",
-    "category": "Clothing"
+    "category": "Clothing",
+    "rating": 4.3
   },
   {
     "id": 10,
     "name": "Decathlon Dumbbell Set",
     "price": 2799,
-    "description": "Adjustable dumbbell set suitable for home workouts and gym training.",
-    "image": "https://rukminim2.flixcart.com/image/704/844/kz1lle80/dumbbell/a/3/c/-original-imagb53grxdnqqgy.jpeg?q=90&crop=false",
-    "category": "Fitness"
+    "description": "The Decathlon Dumbbell Set is an excellent choice for home workouts and gym training, offering versatility and convenience in one package. The set includes adjustable weights that can be customized to suit your fitness level and exercise needs, making it suitable for both beginners and experienced lifters. With durable construction and easy-to-use locking mechanisms, it ensures safety and long-lasting use. Perfect for strength training, toning, and functional workouts, this dumbbell set allows you to target multiple muscle groups effectively. Its compact design makes it easy to store, making it a practical addition to any fitness routine.",
+    "image": "https://cdn.pixabay.com/photo/2016/03/31/19/34/black-1295124_1280.png",
+    "category": "Fitness",
+    "rating": 4.6
+  },
+    {
+    "id": 11,
+    "name": "Spalding Basketball Hoop",
+    "price": 6999,
+    "description": "The Spalding Basketball Hoop is built for players who want to take their game outdoors without compromising on quality. With an adjustable height system, it suits beginners learning fundamentals and advanced players honing competitive skills. The sturdy backboard provides consistent rebound response, while the heavy-duty rim withstands powerful dunks and shots. Designed for long-term durability, its base can be filled with water or sand for added stability, ensuring safe play even in intense matches. Easy to assemble and portable, this hoop is perfect for driveways, backyards, or community spaces, offering a professional basketball experience at home.",
+    "image": "https://cdn.pixabay.com/photo/2012/04/13/18/36/backboard-33205_1280.png",
+    "category": "Basketball",
+    "rating": 4.6
+  },
+  {
+    "id": 12,
+    "name": "Yonex Shuttlecock Pack",
+    "price": 899,
+    "description": "This Yonex Shuttlecock Pack includes six high-quality feather shuttlecocks designed to meet tournament standards. Crafted for consistency, each shuttle provides a stable flight path and accurate trajectory, making rallies smoother and more competitive. The strong feathers are carefully selected to resist wear and maintain shape even after multiple games. With durable cork bases, these shuttlecocks offer excellent control and precision, ideal for competitive matches and serious practice. Lightweight yet reliable, they suit indoor courts best and deliver the professional touch Yonex is known for in the badminton community.",
+    "image": "https://cdn.pixabay.com/photo/2016/03/31/15/04/badminton-1292971_1280.png",
+    "category": "Badminton",
+    "rating": 4.4
+  },
+  {
+    "id": 13,
+    "name": "SG Cricket Gloves",
+    "price": 1499,
+    "description": "The SG Cricket Gloves are engineered for professional batting comfort and protection. Designed with high-density padding and strong finger guards, they shield your hands against fast deliveries while maintaining flexibility for comfortable grip. The premium leather palms provide excellent feel and long-lasting durability, while perforations enhance breathability to keep hands dry during long innings. With reinforced stitching and a snug wrist strap, these gloves stay secure and allow natural wrist movement. Suitable for both practice sessions and competitive play, they combine safety, style, and performance trusted by many aspiring and professional cricketers.",
+    "image": "https://www.khelmart.com/pub/media/catalog/product/cache/712b931dac1b924a11d1b7282ad89910/5/_/5_462_1.jpg",
+    "category": "Cricket",
+    "rating": 4.5
+  },
+  {
+    "id": 14,
+    "name": "Wilson Tennis Racket",
+    "price": 4999,
+    "description": "The Wilson Tennis Racket is a high-performance graphite racket crafted for intermediate and advanced players seeking precision and power. Its lightweight yet strong frame allows for fast swings and controlled strokes, making it ideal for both baseline rallies and net play. The enlarged sweet spot provides forgiveness for off-center shots, while the grip ensures a firm hold without strain during long matches. Durable strings deliver excellent tension and spin control, giving players the edge to dominate points. Whether training seriously or competing, this racket brings professional-level reliability and performance to your game.",
+    "image": "https://cdn.pixabay.com/photo/2013/07/13/09/45/tennis-racket-155963_1280.png",
+    "category": "Tennis",
+    "rating": 4.6
+  },
+  {
+    "id": 15,
+    "name": "Decathlon Yoga Mat",
+    "price": 999,
+    "description": "The Decathlon Yoga Mat is designed for comfort, safety, and stability during yoga, pilates, and floor exercises. Its 6mm thick cushioning provides ample support for joints, reducing strain on knees and elbows. Made from non-slip material, it ensures grip even during sweaty sessions, allowing you to focus on your practice without worry. Lightweight and portable, it can be rolled up easily for storage or travel. Durable and easy to clean, this mat suits beginners as well as experienced practitioners looking for reliable support in every pose and stretch.",
+    "image": "https://cdn.pixabay.com/photo/2025/03/17/16/18/pose-9476334_1280.png",
+    "category": "Fitness",
+    "rating": 4.4
+  },
+  {
+    "id": 16,
+    "name": "Speedo Swimming Goggles",
+    "price": 799,
+    "description": "Speedo Swimming Goggles are engineered for swimmers who need clarity and protection in the water. With an anti-fog coating and UV protection, they ensure clear underwater vision while keeping eyes safe from sunlight during outdoor swims. The soft silicone gasket creates a comfortable, leak-proof seal, while the adjustable strap provides a secure and personalized fit. Lightweight yet durable, these goggles are perfect for training, competition, or recreational swimming. Whether in the pool or open water, they deliver long-lasting comfort and reliable performance for swimmers of all levels.",
+    "image": "https://cdn.pixabay.com/photo/2013/07/13/13/42/snorkel-161436_1280.png",
+    "category": "Swimming",
+    "rating": 4.5
+  },
+  {
+    "id": 17,
+    "name": "Arena Swim Cap",
+    "price": 399,
+    "description": "The Arena Swim Cap is made from durable silicone, designed to provide a snug yet comfortable fit for swimmers. It reduces drag in the water, enhancing speed and performance during training or competitions. The material stretches easily, accommodating different head sizes while maintaining shape and durability. Comfortable enough for extended sessions, it also helps keep hair protected from chlorine damage. Its simple design makes it easy to wear and remove without pulling hair. Ideal for both casual swimmers and athletes, this cap ensures practicality, comfort, and reliable use.",
+    "image": "https://png.pngtree.com/recommend-works/png-clipart/20250612/ourmid/pngtree-swimming-cap-3d-decoration-png-image_16398057.png",
+    "category": "Swimming",
+    "rating": 4.3
+  },
+  {
+    "id": 18,
+    "name": "Nike Training Shorts",
+    "price": 1599,
+    "description": "Nike Training Shorts are built for athletes who want comfort, style, and flexibility in their workouts. Crafted from lightweight, breathable fabric, they wick away sweat and keep you cool during high-intensity sessions. The elastic waistband ensures a secure fit, while side pockets provide storage for essentials like keys or a phone. Their design promotes a full range of motion, making them suitable for gym workouts, running, or outdoor training. Durable stitching and premium material ensure long-lasting use, while the sporty look allows them to double as casual wear.",
+    "image": "https://cdn.pixabay.com/photo/2017/07/08/18/15/man-2485200_1280.png",
+    "category": "Clothing",
+    "rating": 4.4
+  },
+  {
+    "id": 19,
+    "name": "Adidas Sports Cap",
+    "price": 899,
+    "description": "The Adidas Sports Cap combines functionality and fashion, making it suitable for both athletic activities and casual outings. Made from sweat-wicking fabric, it helps keep your head cool and dry even during intense sessions under the sun. The adjustable strap ensures a snug fit, while the lightweight build provides all-day comfort. Its structured design shields your eyes from sunlight, improving visibility and focus. Whether you’re training, playing sports, or just heading outdoors, this cap delivers durability, comfort, and a classic sporty style.",
+    "image": "https://cdn.pixabay.com/photo/2012/04/18/22/17/cap-38061_1280.png",
+    "category": "Clothing",
+    "rating": 4.3
+  },
+  {
+    "id": 20,
+    "name": "Decathlon Skipping Rope",
+    "price": 499,
+    "description": "The Decathlon Skipping Rope is an affordable yet effective fitness tool for cardio training, endurance building, and weight loss. Its adjustable length makes it suitable for users of all heights, while the lightweight design ensures easy portability for home, gym, or travel workouts. Durable handles provide a secure grip, preventing slips during fast movements. Skipping improves agility, coordination, and cardiovascular health, and this rope is built to withstand regular use. Whether you’re a beginner adding cardio to your routine or an athlete sharpening footwork, this skipping rope offers excellent performance and value.",
+    "image": "https://cdn.pixabay.com/photo/2016/08/31/22/20/skipping-rope-1634746_1280.jpg",
+    "category": "Fitness",
+    "rating": 4.4
+  },
+  {
+    "id": 21,
+    "name": "Butterfly Table Tennis Bat",
+    "price": 2299,
+    "description": "The Butterfly Table Tennis Bat is crafted for players who want a balance of speed, spin, and control in their gameplay. Its high-quality rubber surface enhances grip on the ball, allowing powerful serves and precise spins. Lightweight yet sturdy, the bat’s wooden blade ensures comfort during long matches without compromising strength. Designed for intermediate players looking to improve, it supports fast rallies and accurate shot placement. Durable construction ensures longevity, making it a reliable choice for training, friendly matches, and tournaments alike.",
+    "image": "https://cdn.pixabay.com/photo/2013/07/13/10/51/table-tennis-157932_1280.png",
+    "category": "Table Tennis",
+    "rating": 4.5
+  },
+  {
+    "id": 22,
+    "name": "STAG Table Tennis Balls (Pack of 12)",
+    "price": 599,
+    "description": "The STAG Table Tennis Balls pack includes 12 durable 3-star balls approved for practice and tournament use. Each ball is made with precision to ensure consistent bounce, speed, and spin performance, making rallies smooth and competitive. Their round shape and fine finish guarantee accurate flight, enhancing overall gameplay experience. Whether you are a beginner practicing drills or a professional training for competition, these balls are built to withstand repeated high-impact use. Affordable and reliable, they’re a must-have accessory for any table tennis enthusiast.",
+    "image": "https://m.media-amazon.com/images/I/41vQf0WjAHL._SX679_.jpg",
+    "category": "Table Tennis",
+    "rating": 4.3
+  },
+  {
+    "id": 23,
+    "name": "Quechua Trekking Shoes",
+    "price": 4499,
+    "description": "The Quechua Trekking Shoes are designed for outdoor adventurers who demand durability, comfort, and grip. Made with waterproof material, they keep feet dry in wet conditions while offering breathability for long hikes. The rugged outsole provides strong traction on rocky, muddy, and uneven terrain, reducing slips and enhancing stability. With cushioned midsoles and ankle support, these shoes reduce strain during extended treks. Lightweight yet tough, they are perfect for hiking, trekking, and outdoor travel. Built to endure challenging environments, they offer reliability for both beginners and seasoned explorers.",
+    "image": "https://cdn.pixabay.com/photo/2017/07/31/15/06/boot-2558324_1280.jpg",
+    "category": "Trekking",
+    "rating": 4.6
+  },
+  {
+    "id": 24,
+    "name": "Wildcraft Backpack",
+    "price": 2999,
+    "description": "The Wildcraft Backpack is a versatile and spacious option suitable for trekking, travel, or daily use. Made with tough, water-resistant fabric, it ensures durability and protection for your essentials in all weather. Multiple compartments provide organized storage for clothes, gadgets, and accessories, while padded straps enhance comfort during long wear. The ergonomic design supports your back and shoulders, reducing strain during hikes or commutes. Stylish yet practical, this backpack balances functionality and modern design, making it a dependable companion for students, travelers, and outdoor enthusiasts alike.",
+    "image": "https://cdn.pixabay.com/photo/2017/06/30/21/53/backpack-2459934_1280.png",
+    "category": "Trekking",
+    "rating": 4.5
+  },
+  {
+    "id": 25,
+    "name": "Yonex Tennis Balls (Pack of 3)",
+    "price": 499,
+    "description": "The Yonex Tennis Balls pack includes three durable pressurized balls ideal for all types of courts, including hard, clay, and grass. Engineered for consistent bounce and reliable speed, they support smooth rallies and precise serves. Their sturdy felt covering resists wear, extending lifespan even during intense play. Suitable for both casual practice and competitive matches, these balls meet standard size and weight regulations. Compact and convenient to carry, they are a trusted choice for players seeking quality and performance at an affordable price.",
+    "image": "https://cdn.pixabay.com/photo/2014/04/02/17/04/tennis-ball-307846_1280.png",
+    "category": "Tennis",
+    "rating": 4.4
   }
 ]

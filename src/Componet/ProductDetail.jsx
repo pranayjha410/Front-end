@@ -16,14 +16,14 @@ const ProductDetail = ({ cartItems, handleToCart, handleRemoveItem, handleDecrea
     <div className="min-h-screen flex flex-col md:flex-row p-6 gap-6">
       {/* Left: Image */}
       <div className="md:w-1/2 flex justify-center items-center">
-        <img src={product.image} alt={product.name} className="w-full h-auto max-h-[400px] object-contain rounded-lg" />
+        <img src={product.image} alt={product.name} className="w-full h-auto max-h-[440px] object-contain rounded-lg bg-center" />
       </div>
 
       {/* Right: Details */}
       <div className="md:w-1/2 flex flex-col gap-4">
-        <h1 className="text-3xl font-bold">{product.name}</h1>
-        <p className="text-xl font-semibold text-blue-600">₹{product.price}</p>
-        <p className="text-gray-700">{product.description}</p>
+        <h1 className="text-3xl font-bold">{product.name} <span className="text-yellow-400">({product.rating}/5)</span></h1>
+        <h2 className="text-2xl font-extrabold text-blue-600">₹{product.price}</h2>
+        <p className="text-gray-800">{product.description}</p>
 
         <div className="flex gap-3 mt-4">
           <button

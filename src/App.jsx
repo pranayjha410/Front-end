@@ -6,31 +6,30 @@ import ProductCard from "./Pages/ProductCard";
 import Home from "./Pages/Home";
 import Footer from "./Componet/Footer";
 import { useState } from "react";
-import ProductDetail from "./Componet/ProductDetail"
-
-
+import ProductDetail from "./Componet/ProductDetail";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 import { useCart } from "./Hooks/UseCart";
 
-
 function App() {
-  const { cartItems, handleToCart, handleDecreaseQuantity, handleRemoveItem } =
-    useCart();
+  const { cartItems, handleToCart, handleDecreaseQuantity, handleRemoveItem } =   useCart();
+ 
 
-     const [query, setQuery] = useState(''); //lifted state
+  const [query, setQuery] = useState(""); //lifted state
 
   return (
     <div>
       {/* Navbar */}
       <Navbar
-        cartCount={cartItems.reduce((total, item) => total + item.quantity, 0)} query={query} setQuery={setQuery}
+        cartCount={cartItems.reduce((total, item) => total + item.quantity, 0)}
+        query={query}
+        setQuery={setQuery}
       />
 
       {/* Routes */}
       <Routes>
-        <Route path="/" element={<Home/>} />
+        <Route path="/" element={<Home />} />
 
         <Route
           path="/product"
@@ -40,21 +39,22 @@ function App() {
               handleToCart={handleToCart}
               handleRemoveItem={handleRemoveItem}
               handleDecreaseQuantity={handleDecreaseQuantity}
-               query={query} setQuery={setQuery}
+              query={query}
+              setQuery={setQuery}
             />
           }
         />
-         <Route
-    path="/product/:id"
-    element={
-      <ProductDetail
-        cartItems={cartItems}
-        handleToCart={handleToCart}
-        handleRemoveItem={handleRemoveItem}
-        handleDecreaseQuantity={handleDecreaseQuantity}
-      />
-    }
-  />
+        <Route
+          path="/product/:id"
+          element={
+            <ProductDetail
+              cartItems={cartItems}
+              handleToCart={handleToCart}
+              handleRemoveItem={handleRemoveItem}
+              handleDecreaseQuantity={handleDecreaseQuantity}
+            />
+          }
+        />
         <Route
           path="/cartPage"
           element={
@@ -67,10 +67,7 @@ function App() {
           }
         />
         <Route path="/about" element={<div>About Us Page Coming Soon</div>} />
-        <Route
-          path="/contact"
-          element={<div>Contact Page Coming Soon</div>}
-        />
+        <Route path="/contact" element={<div>Contact Page Coming Soon</div>} />
         <Route path="*" element={<NotFound />} />
       </Routes>
 
@@ -85,8 +82,8 @@ function App() {
         pauseOnHover
         theme="colored"
       />
-      
-    <Footer/>
+
+      <Footer />
     </div>
   );
 }
