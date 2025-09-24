@@ -1,7 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
+  const navigate = useNavigate();
   return (
   <section className="relative h-[70vh] bg-gradient-to-r from-blue-700 to-indigo-900 flex items-center justify-center text-center px-6">
    
@@ -20,9 +22,9 @@ const Home = () => {
         <p className="text-lg md:text-xl mb-6">
           Your one-stop shop for premium sports gear & accessories.
         </p>
-        <button className="bg-yellow-400 text-black px-6 py-3 rounded-lg font-semibold hover:bg-yellow-500 transition">
+        <button className="bg-yellow-400 text-black px-6 py-3 rounded-lg font-semibold hover:bg-yellow-500 transition" onClick={() =>navigate('/product')}>
           Shop Now
-        </button>
+        </button >
       </motion.div>
     </section>
   );

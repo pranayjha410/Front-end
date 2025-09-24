@@ -1,61 +1,62 @@
-import React, { useState } from "react";
-
+import React, { useState, useEffect } from "react";
 import List from "../Componet/List";
-import sportData from "../api/Data.json";
-import SearchBar from "../Componet/SearchBar";
+import axios from "axios";
 
-const ProductCard = ({
-  cartItems,
-  handleToCart,
-  handleRemoveItem,
-  handleDecreaseQuantity,
-  query,
-  setQuery,
-}) => {
+const ProductCard = ({ cartItems, handleToCart, handleRemoveItem, handleDecreaseQuantity, query, setQuery }) => {
+  const [products, setProducts] = useState([]);
   const [category, setCategory] = useState("All");
-  const categories = [
-    "All",
-    ...new Set(sportData.map((item) => item.category)),
-  ];
+  const [loading, setLoading] = useState(true);
 
-  const filteredProducts = sportData.filter((item) => {
+  useEffect(() => {
+    const fetchProducts = async () => {
+      try {
+        const res = await axios.get("https://68d3a808214be68f8c66aca9.mockapi.io/products");
+        setProducts(res.data);
+      } catch (err) {
+        console.error(err);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchProducts();
+  }, []);
+
+  const categories = ["All", ...new Set(products.map((item) => item.category))];
+
+  const filteredProducts = products.filter(item => {
     const matchesSearch = item.name.toLowerCase().includes(query.toLowerCase());
-    const matchesCategory =
-      category === "All" || item.category === category; 
-
-    // product only shown if BOTH are true
+    const matchesCategory = category === "All" || item.category === category;
     return matchesSearch && matchesCategory;
   });
+
+  if (loading) return <p className="text-center mt-20">Loading products...</p>;
 
   return (
     <div className="min-h-screen bg-gray-50 relative">
       <div className="pt-20 px-6">
-        {/* category filter dropdown */}
+        {/* Category Dropdown */}
         <div className="mb-6 flex justify-start absolute top-4 left-4 ml-2">
           <select
             value={category}
             onChange={(e) => setCategory(e.target.value)}
             className="border rounded-lg px-4 py-2 shadow-sm focus:outline-none"
           >
-            {categories.map((cat) => (
-              <option key={cat} value={cat}>
-                {cat}
-              </option>
+            {categories.map(cat => (
+              <option key={cat} value={cat}>{cat}</option>
             ))}
           </select>
         </div>
 
         {filteredProducts.length > 0 ? (
           <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-            {filteredProducts.map((curEle) => (
+            {filteredProducts.map(product => (
               <List
-                key={curEle.id}
-                curEle={curEle}
-                itemAdded={cartItems.some((item) => item.id === curEle.id)}
+                key={product.id}
+                curEle={product}
+                cartItems={cartItems}
                 handleToCart={handleToCart}
                 handleRemoveItem={handleRemoveItem}
                 handleDecreaseQuantity={handleDecreaseQuantity}
-                cartItems={cartItems}
               />
             ))}
           </ul>
