@@ -16,10 +16,13 @@ function App() {
   const [query, setQuery] = useState("");
 
   return (
-    <div>
+      <div className="flex flex-col min-h-screen">
+        {/* NavBAr */}
       <Navbar cartCount={cartItems.reduce((total, item) => total + item.quantity, 0)} query={query} setQuery={setQuery} />
 
-      <Routes>
+
+      {/* Main Boady */}
+      <main className="flex-grow"><Routes>
         <Route path="/" element={<Home />} />
         <Route path="/product" element={
           <ProductCard
@@ -50,7 +53,7 @@ function App() {
         <Route path="/about" element={<div>About Us Page Coming Soon</div>} />
         <Route path="/contact" element={<div>Contact Page Coming Soon</div>} />
         <Route path="*" element={<NotFound />} />
-      </Routes>
+      </Routes></main>
 
       <ToastContainer position="bottom-right" autoClose={2000} hideProgressBar={false} newestOnTop={false} closeOnClick pauseOnFocusLoss pauseOnHover theme="colored" />
 

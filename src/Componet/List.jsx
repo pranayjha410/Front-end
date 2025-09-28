@@ -8,7 +8,12 @@ const List = ({ curEle, cartItems, handleToCart, handleRemoveItem, handleDecreas
 
   return (
     <div className="h-full">
-      <div className="border rounded-xl shadow-md p-4 h-full flex flex-col">
+      {/* Card */}
+      <div
+        className="border rounded-xl shadow-md p-4 flex flex-col justify-between 
+                   transition-transform duration-300 ease-in-out hover:scale-105 
+                   max-w-xs mx-auto h-full bg-white"
+      >
         {/* Image */}
         <img
           src={curEle.image}
@@ -20,13 +25,29 @@ const List = ({ curEle, cartItems, handleToCart, handleRemoveItem, handleDecreas
         {/* Product Info */}
         <h2 className="text-gray-900 font-medium text-lg">{curEle.name}</h2>
         <p className="text-blue-600 font-semibold">₹{curEle.price}</p>
-        <p className="flex-grow text-gray-800 text-sm">{curEle.description}</p>
+        
+        {/* Description */}
+        <div className="text-gray-800 text-sm mt-1">
+          {curEle.description.length > 50
+            ? `${curEle.description.substring(0, 50)}...`
+            : curEle.description}
+          {curEle.description.length > 50 && (
+            <span
+              className="text-blue-600 cursor-pointer ml-1 hover:underline"
+              onClick={() => navigate(`/product/${curEle.id}`)}
+            >
+              Show More
+            </span>
+          )}
+        </div>
 
         {/* Buttons */}
-        <div className="flex gap-2 mt-auto">
+        <div className="flex gap-2 mt-4">
           <button
             className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-3 py-2 rounded-lg shadow-md"
-            onClick={() => itemAdded ? handleRemoveItem(curEle.id) : handleToCart(curEle.id)}
+            onClick={() =>
+              itemAdded ? handleRemoveItem(curEle.id) : handleToCart(curEle.id)
+            }
           >
             {itemAdded ? "Remove from Cart" : "Add to Cart"}
           </button>
@@ -34,18 +55,13 @@ const List = ({ curEle, cartItems, handleToCart, handleRemoveItem, handleDecreas
           {itemAdded && (
             <QuantityControl
               id={curEle.id}
-              quantity={cartItems.find(item => item.id === curEle.id)?.quantity || 1}
+              quantity={
+                cartItems.find(item => item.id === curEle.id)?.quantity || 1
+              }
               handleToCart={handleToCart}
               handleDecreaseQuantity={handleDecreaseQuantity}
             />
           )}
-
-          <button
-            className="bg-gray-700 hover:bg-gray-800 text-white font-semibold px-3 py-2 rounded-lg shadow-md"
-            onClick={() => navigate(`/product/${curEle.id}`)}
-          >
-            View Details
-          </button>
         </div>
       </div>
     </div>
