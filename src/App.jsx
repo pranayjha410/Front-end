@@ -10,6 +10,8 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useCart } from "./Hooks/UseCart";
 import { useState } from "react";
+import About from "./Pages/About";
+import Contact from "./Pages/Contact";
 
 function App() {
   const { cartItems, handleToCart, handleDecreaseQuantity, handleRemoveItem } = useCart();
@@ -50,8 +52,8 @@ function App() {
             handleDecreaseQuantity={handleDecreaseQuantity}
           />
         } />
-        <Route path="/about" element={<div>About Us Page Coming Soon</div>} />
-        <Route path="/contact" element={<div>Contact Page Coming Soon</div>} />
+        <Route path="/about" element={<About/>} />
+        <Route path="/contact" element={<Contact/>} />
         <Route path="*" element={<NotFound />} />
       </Routes></main>
 

@@ -24,7 +24,7 @@ const ProductDetail = ({ cartItems, handleToCart, handleRemoveItem, handleDecrea
 
       {/* Right: Details */}
       <div className="md:w-1/2 flex flex-col gap-4">
-        <h1 className="text-3xl font-bold">{product.name}</h1>
+        <h1 className="text-3xl font-bold">{product.name}<span className="text-yellow-400">({product.rating}/5)</span></h1>
         <p className="text-xl font-semibold text-blue-600">₹{product.price}</p>
         <p className="text-gray-700">{product.description}</p>
 
