@@ -2,7 +2,14 @@ import React, { useState, useEffect } from "react";
 import List from "../Componet/List";
 import axios from "axios";
 
-const ProductCard = ({ cartItems, handleToCart, handleRemoveItem, handleDecreaseQuantity, query, setQuery }) => {
+const ProductCard = ({
+  cartItems,
+  handleToCart,
+  handleRemoveItem,
+  handleDecreaseQuantity,
+  query,
+  setQuery,
+}) => {
   const [products, setProducts] = useState([]);
   const [category, setCategory] = useState("All");
   const [loading, setLoading] = useState(true);
@@ -10,7 +17,9 @@ const ProductCard = ({ cartItems, handleToCart, handleRemoveItem, handleDecrease
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const res = await axios.get("https://68d3a808214be68f8c66aca9.mockapi.io/products");
+        const res = await axios.get(
+          "https://68d3a808214be68f8c66aca9.mockapi.io/products"
+        );
         setProducts(res.data);
       } catch (err) {
         console.error(err);
@@ -23,13 +32,13 @@ const ProductCard = ({ cartItems, handleToCart, handleRemoveItem, handleDecrease
 
   const categories = ["All", ...new Set(products.map((item) => item.category))];
 
-  const filteredProducts = products.filter(item => {
+  const filteredProducts = products.filter((item) => {
     const matchesSearch = item.name.toLowerCase().includes(query.toLowerCase());
     const matchesCategory = category === "All" || item.category === category;
     return matchesSearch && matchesCategory;
   });
 
- if (loading) {
+  if (loading) {
     return (
       <div className="flex justify-center items-center min-h-screen">
         <div className="w-12 h-12 border-4 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
@@ -47,15 +56,17 @@ const ProductCard = ({ cartItems, handleToCart, handleRemoveItem, handleDecrease
             onChange={(e) => setCategory(e.target.value)}
             className="border rounded-lg px-4 py-2 shadow-sm focus:outline-none"
           >
-            {categories.map(cat => (
-              <option key={cat} value={cat}>{cat}</option>
+            {categories.map((cat) => (
+              <option key={cat} value={cat}>
+                {cat}
+              </option>
             ))}
           </select>
         </div>
 
         {filteredProducts.length > 0 ? (
           <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-            {filteredProducts.map(product => (
+            {filteredProducts.map((product) => (
               <List
                 key={product.id}
                 curEle={product}

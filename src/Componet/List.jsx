@@ -43,7 +43,7 @@ const List = ({ curEle, cartItems, handleToCart, handleRemoveItem, handleDecreas
 
         {/* Buttons */}
         <div className="flex gap-2 mt-4">
-          <button
+          <button type="button"
             className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-3 py-2 rounded-lg shadow-md"
             onClick={() =>
               itemAdded ? handleRemoveItem(curEle.id) : handleToCart(curEle.id)

@@ -21,7 +21,7 @@ const subtotalAmount = cartProducts.reduce((acc, item) => acc + item.price * ite
       <p className="mb-2">Total Items: {totalItems}</p>
       <p className="mb-2 font-semibold" >Delivery: ₹50</p>
       <p className="mb-4 font-bold">Total Amount: ₹{subtotalAmount}</p>
-      <button className="w-full bg-yellow-400 text-blue-900 py-2 rounded-lg hover:bg-yellow-500 font-bold">
+      <button type="button" className="w-full bg-yellow-400 text-blue-900 py-2 rounded-lg hover:bg-yellow-500 font-bold">
         Proceed to Pay
       </button>
     </div>

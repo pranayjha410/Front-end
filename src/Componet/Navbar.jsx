@@ -31,7 +31,9 @@ const Navbar = ({ cartCount, query, setQuery }) => {
               to="/"
               className={({ isActive }) =>
                 `cursor-pointer hover:text-yellow-400 ${
-                  isActive ? "text-yellow-400 font-semibold border-b-2 border-yellow-400" : ""
+                  isActive
+                    ? "text-yellow-400 font-semibold border-b-2 border-yellow-400"
+                    : ""
                 }`
               }
             >
@@ -42,7 +44,9 @@ const Navbar = ({ cartCount, query, setQuery }) => {
               to="/product"
               className={({ isActive }) =>
                 `cursor-pointer hover:text-yellow-400 ${
-                  isActive ? "text-yellow-400 font-semibold border-b-2 border-yellow-400" : ""
+                  isActive
+                    ? "text-yellow-400 font-semibold border-b-2 border-yellow-400"
+                    : ""
                 }`
               }
             >
@@ -53,7 +57,9 @@ const Navbar = ({ cartCount, query, setQuery }) => {
               to="/about"
               className={({ isActive }) =>
                 `cursor-pointer hover:text-yellow-400 ${
-                  isActive ? "text-yellow-400 font-semibold border-b-2 border-yellow-400" : ""
+                  isActive
+                    ? "text-yellow-400 font-semibold border-b-2 border-yellow-400"
+                    : ""
                 }`
               }
             >
@@ -64,7 +70,9 @@ const Navbar = ({ cartCount, query, setQuery }) => {
               to="/contact"
               className={({ isActive }) =>
                 `cursor-pointer hover:text-yellow-400 ${
-                  isActive ? "text-yellow-400 font-semibold border-b-2 border-yellow-400" : ""
+                  isActive
+                    ? "text-yellow-400 font-semibold border-b-2 border-yellow-400"
+                    : ""
                 }`
               }
             >
@@ -74,17 +82,23 @@ const Navbar = ({ cartCount, query, setQuery }) => {
 
           {/* Search bar */}
           <div className="ml-6">
-            {location.pathname === "/product" && <SearchBar query={query} setQuery={setQuery} />}
+            {location.pathname === "/product" && (
+              <SearchBar query={query} setQuery={setQuery} />
+            )}
           </div>
-          
         </div>
 
         {/* Cart icon */}
         <div className="flex items-center gap-4">
-          {location.pathname !== "/CartPage" && <NavLink to="/CartPage"><Cart cartCount={cartCount} /></NavLink>}
+          {location.pathname !== "/CartPage" && (
+            <NavLink to="/CartPage">
+              <Cart cartCount={cartCount} />
+            </NavLink>
+          )}
 
           {/* Mobile menu button */}
           <button
+            type="button"
             className="md:hidden text-2xl"
             onClick={() => setMenuOpen(!menuOpen)}
           >
@@ -92,10 +106,6 @@ const Navbar = ({ cartCount, query, setQuery }) => {
           </button>
         </div>
       </div>
-
-      
-
-
 
       {/* Mobile Menu */}
       {menuOpen && (
@@ -145,13 +155,12 @@ const Navbar = ({ cartCount, query, setQuery }) => {
           </NavLink>
 
           {/* Mobile search bar */}
-          
         </div>
       )}
 
       <div className="mt-2 md:hidden">
-            <SearchBar query={query} setQuery={setQuery} />
-          </div>
+        <SearchBar query={query} setQuery={setQuery} />
+      </div>
     </header>
   );
 };
